@@ -11625,9 +11625,13 @@ textarea.form-control-lg {
   --bs-gutter-x: 3rem !important;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 hr, .hr {
   display: block;
-  margin: 3rem calc(var(--bs-gutter-x) / 2);
+  margin: 2rem calc(var(--bs-gutter-x) / 2);
   border: 0 !important;
   height: 3px;
   background-color: var(--bs-light);
@@ -11788,7 +11792,7 @@ hr .hr-text, .hr .hr-text {
   flex: 0 0 auto;
   width: 16.66666667%;
   height: 100%;
-  overflow-y: hidden;
+  overflow: visible;
 }
 #index-welcome-wrapper .row .column.column-double {
   width: 33.33333333%;
@@ -11813,6 +11817,9 @@ hr .hr-text, .hr .hr-text {
 #index-welcome-wrapper .row .column.split-vertical > img {
   height: 50%;
 }
+#index-welcome-wrapper .row .column.split-vertical > img:not(:last-child) {
+  height: calc(50% - 0.25rem);
+}
 #index-welcome-wrapper .row .column .welcome-text {
   position: absolute;
   bottom: 0;
@@ -11825,6 +11832,100 @@ hr .hr-text, .hr .hr-text {
   margin-right: 1rem;
   font-size: 8rem;
   line-height: 1;
+}
+
+.section-title {
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 8rem;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+  background-size: cover;
+  background-position: center;
+  background-clip: text;
+  color: transparent;
+  width: fit-content;
+}
+
+#index-overview-wrapper .section-title {
+  background-image: url(/static/img/textbg/overview.jpg);
+}
+
+#index-whychoose-wrapper .section-title {
+  background-image: url(/static/img/textbg/whychoose.jpg);
+}
+#index-whychoose-wrapper ul {
+  list-style: none;
+}
+#index-whychoose-wrapper ul li {
+  display: flex;
+}
+#index-whychoose-wrapper ul li::before {
+  content: "";
+  display: inline-block;
+  width: 0.75rem;
+  aspect-ratio: 1/1;
+  margin-right: 1rem;
+  background-image: url(/static/img/point-chevron.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#index-whychoose-wrapper ul.main-ul {
+  position: relative;
+  padding-left: 2rem;
+  color: var(--bs-muted);
+}
+#index-whychoose-wrapper ul.main-ul::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0.5rem;
+  height: 100%;
+  background-color: var(--bs-primary);
+  background-image: linear-gradient(to bottom, var(--bs-primary), var(--bs-secondary));
+}
+
+#index-products-wrapper .section-title {
+  background-image: url(/static/img/textbg/products.jpg);
+}
+
+#index-design-wrapper .section-title {
+  background-image: url(/static/img/textbg/design.png);
+}
+
+#index-customers-wrapper .section-title {
+  background-image: url(/static/img/textbg/customers.jpg);
+}
+#index-customers-wrapper ul {
+  position: relative;
+}
+#index-customers-wrapper ul::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  width: 0.75rem;
+  height: 100%;
+  background-color: var(--bs-primary);
+  background-image: linear-gradient(to bottom, var(--bs-secondary), var(--bs-primary));
+}
+#index-customers-wrapper ul li {
+  list-style: none;
+  list-style-position: inside;
+  display: flex;
+}
+#index-customers-wrapper ul li::before {
+  content: "";
+  display: inline-block;
+  width: 0.4rem;
+  aspect-ratio: 1/1;
+  margin-right: 1rem;
+  background-image: url(/static/img/point-chevron.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /*# sourceMappingURL=build.css.map */

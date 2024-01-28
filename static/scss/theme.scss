@@ -1,0 +1,28 @@
+@import "../bootstrap/scss/functions";
+
+$light: #f8fcfc;
+$dark: #030707;
+$primary: #c834ff;
+$secondary: #2aa5fc;
+$info: #fff600;
+$success: #10a103;
+$warning: #f7c104;
+$danger: #e92500; 
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Rethink%20Sans:700|Noto%20Sans%20Caucasian%20Albanian:400');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+$display-font-family: "Roboto", Arial, sans-serif;
+$headings-font-family: "Roboto", Arial, sans-serif;
+$font-family-base: "Noto Sans Caucasian Albanian", Arial, sans-serif;
+
+@import "../bootstrap/scss/bootstrap";
+
+@import ".\\variables_dark";
+
+:root, body {
+    --bs-body-bg: var(--bs-dark) !important;
+}

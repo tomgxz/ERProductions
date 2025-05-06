@@ -1,0 +1,313 @@
+:root, .container, .container-fluid, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm {
+  --bs-gutter-x: 3rem !important;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+hr, .hr {
+  display: block;
+  margin: 2rem calc(var(--bs-gutter-x) / 2);
+  border: 0 !important;
+  height: 3px;
+  background-color: var(--bs-light);
+  background-image: linear-gradient(to right, var(--bs-primary), var(--bs-secondary), var(--bs-info));
+  opacity: 1;
+  position: relative;
+}
+hr:has(.hr-text), .hr:has(.hr-text) {
+  margin-top: 4rem;
+}
+hr .hr-text, .hr .hr-text {
+  position: absolute;
+  bottom: 50%;
+  left: 0;
+}
+
+#header-wrapper header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+#header-wrapper header::after {
+  content: "";
+  background-color: var(--bs-primary);
+  background-image: linear-gradient(to right, var(--bs-primary), var(--bs-secondary), var(--bs-info));
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+}
+
+#index-hero-wrapper .hero-title-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+#index-hero-wrapper .hero-title-wrapper .hero-title {
+  display: flex;
+  flex-direction: column;
+  font-weight: 900;
+  margin-bottom: clamp(0rem, 4vw, 2.5rem);
+}
+#index-hero-wrapper .hero-title-wrapper .hero-title .hero-title-line {
+  background-size: cover;
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: clamp(1.5rem, 10vw, 8.5rem);
+  text-wrap: nowrap;
+  letter-spacing: clamp(0rem, 0.3vw, 0.25rem);
+  line-height: 1;
+}
+#index-hero-wrapper .hero-title-wrapper .hero-title .hero-title-line:nth-child(1) {
+  background-image: url(/static/img/titletext/1.jpg);
+}
+#index-hero-wrapper .hero-title-wrapper .hero-title .hero-title-line:nth-child(2) {
+  background-image: url(/static/img/titletext/2.jpg);
+}
+#index-hero-wrapper .hero-title-wrapper .hero-title .hero-title-line:nth-child(3) {
+  background-image: url(/static/img/titletext/3.jpg);
+}
+#index-hero-wrapper .hero-title-wrapper .hero-title .hero-title-line:nth-child(4) {
+  background-image: url(/static/img/titletext/4.jpg);
+}
+#index-hero-wrapper .hero-title-wrapper .hero-title .hero-title-line:nth-child(5) {
+  background-image: url(/static/img/titletext/5.jpg);
+}
+#index-hero-wrapper .hero-subtitle-wrapper .hero-subtitle {
+  --subtitle-gap: clamp(2rem, 5vw, 4rem);
+  display: flex;
+  align-items: center;
+  grid-column-gap: var(--subtitle-gap);
+}
+#index-hero-wrapper .hero-subtitle-wrapper .hero-subtitle .hero-subtitle-location {
+  position: relative;
+  font-size: clamp(1rem, 2vw, 1.75rem);
+  font-weight: 400;
+  letter-spacing: 0.5rem;
+}
+#index-hero-wrapper .hero-subtitle-wrapper .hero-subtitle .hero-subtitle-location:not(:last-child)::after {
+  content: "";
+  background-color: var(--bs-secondary);
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: calc(var(--subtitle-gap) / -2);
+}
+
+@media screen and (max-width: 767px) {
+  #index-hero-wrapper .hero-subtitle-wrapper .hero-subtitle {
+    --subtitle-gap: clamp(.5rem, 5vw, 1.5rem);
+    flex-direction: column;
+    align-items: flex-start;
+    grid-row-gap: var(--subtitle-gap);
+  }
+  #index-hero-wrapper .hero-subtitle-wrapper .hero-subtitle .hero-subtitle-location {
+    font-size: clamp(0.6rem, 2.5vw, 1rem);
+    letter-spacing: clamp(0.1rem, 0.7vw, 0.5rem);
+  }
+  #index-hero-wrapper .hero-subtitle-wrapper .hero-subtitle .hero-subtitle-location:not(:last-child)::after {
+    height: 2px;
+    width: clamp(0.8rem, 2.5vw, 2rem);
+    top: initial;
+    right: initial;
+    bottom: calc(var(--subtitle-gap) / -2);
+    left: 0;
+  }
+}
+#index-showreel-wrapper {
+  display: flex;
+  justify-content: center;
+  height: 2000px;
+  position: relative;
+}
+#index-showreel-wrapper .showreel-wrapper {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-top: 5vh;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+}
+#index-showreel-wrapper .showreel-wrapper .showreel {
+  width: 80%;
+  aspect-ratio: 16/9;
+}
+
+#index-welcome-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  grid-row-gap: 0.25rem;
+}
+#index-welcome-wrapper .row {
+  width: 100%;
+}
+#index-welcome-wrapper .row:not(:last-child) {
+  padding-bottom: 0 !important;
+}
+#index-welcome-wrapper .row.row-large {
+  height: 43rem !important;
+}
+#index-welcome-wrapper .row.row-small {
+  height: 16rem !important;
+}
+#index-welcome-wrapper .row .column {
+  padding: 0 !important;
+  position: relative;
+  flex: 0 0 auto;
+  width: 16.66666667%;
+  height: 100%;
+  overflow: visible;
+}
+#index-welcome-wrapper .row .column.column-double {
+  width: 33.33333333%;
+}
+#index-welcome-wrapper .row .column.column-quad {
+  width: 66.66666667%;
+}
+#index-welcome-wrapper .row .column:not(:last-child) {
+  padding-right: 0.25rem !important;
+}
+#index-welcome-wrapper .row .column > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+#index-welcome-wrapper .row .column.split-vertical {
+  display: flex;
+  flex-direction: column;
+  grid-row-gap: 0.25rem;
+}
+#index-welcome-wrapper .row .column.split-vertical > img {
+  height: 50%;
+}
+#index-welcome-wrapper .row .column.split-vertical > img:not(:last-child) {
+  height: calc(50% - 0.25rem);
+}
+#index-welcome-wrapper .row .column .welcome-text {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: var(--bs-light);
+  opacity: 0.75;
+  text-align: right;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  margin-right: 1rem;
+  font-size: 8rem;
+  line-height: 1;
+}
+
+.section-title {
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 8rem;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+  background-size: cover;
+  background-position: center;
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+#index-overview-wrapper .section-title {
+  background-image: url(/static/img/textbg/overview.jpg);
+}
+
+#index-whychoose-wrapper .section-title {
+  background-image: url(/static/img/textbg/whychoose.jpg);
+}
+#index-whychoose-wrapper ul {
+  list-style: none;
+}
+#index-whychoose-wrapper ul li {
+  display: flex;
+}
+#index-whychoose-wrapper ul li::before {
+  content: "";
+  display: inline-block;
+  width: 0.75rem;
+  aspect-ratio: 1/1;
+  margin-right: 1rem;
+  background-image: url(/static/img/point-chevron.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#index-whychoose-wrapper ul.main-ul {
+  position: relative;
+  padding-left: 2rem;
+  color: var(--bs-muted);
+}
+#index-whychoose-wrapper ul.main-ul::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0.5rem;
+  height: 100%;
+  background-color: var(--bs-primary);
+  background-image: linear-gradient(to bottom, var(--bs-primary), var(--bs-secondary));
+}
+
+#index-products-wrapper .section-title {
+  background-image: url(/static/img/textbg/products.jpg);
+}
+
+#index-design-wrapper .section-title {
+  background-image: url(/static/img/textbg/design.png);
+}
+
+#index-customers-wrapper .section-title {
+  background-image: url(/static/img/textbg/customers.jpg);
+}
+#index-customers-wrapper ul {
+  position: relative;
+}
+#index-customers-wrapper ul::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  width: 0.75rem;
+  height: 100%;
+  background-color: var(--bs-primary);
+  background-image: linear-gradient(to bottom, var(--bs-secondary), var(--bs-primary));
+}
+#index-customers-wrapper ul li {
+  list-style: none;
+  list-style-position: inside;
+  display: flex;
+}
+#index-customers-wrapper ul li::before {
+  content: "";
+  display: inline-block;
+  width: 0.4rem;
+  aspect-ratio: 1/1;
+  margin-right: 1rem;
+  background-image: url(/static/img/point-chevron.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}/*# sourceMappingURL=base.css.map */
